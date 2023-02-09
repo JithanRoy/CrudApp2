@@ -58,7 +58,7 @@ const Home = () => {
                                     return (
                                         <tr key={item.id}>
                                             <td>
-                                                {item.name}
+                                                {item.Name}
                                             </td>
                                             <td>
                                                 {item.age}
