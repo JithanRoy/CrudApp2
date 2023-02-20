@@ -1,11 +1,28 @@
-import React from 'react';
+const Employee = [
+  {
+      id: 1,
+      Name: 'John',
+      age: 21,
+  },
 
-const Employee = () => {
-  return (
-    <div>
-        this is from employee
-    </div>
-  );
-};
-
-export default Employee;
+  {
+      id: 2,
+      Name: 'Jane',
+      age: 22,
+  },
+  {
+      id: 3,
+      Name: 'Mike',
+      age: 23,
+  },
+  {
+      id: 4,
+      Name: 'Mary',
+      age: 24,
+  },
+  {
+      id: 5,
+      Name: 'Nike',
+      age: 25,
+  }
+]
