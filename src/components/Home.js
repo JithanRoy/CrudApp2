@@ -41,15 +41,18 @@ const Home = () => {
 
     let history = useNavigate();
 
+    const handleEdit = (id, name, age) => {
+        localStorage.setItem('Name', name);
+        localStorage.setItem('Age', age);
+        localStorage.setItem('Id', id);
+    }
+
     const handleDelete = (id) => {
         let index = Employee.map((e) => e.id).indexOf(id);
         Employee.splice(index,1);
         history('/');
     }
 
-    const handleEdit = () => {
-        console.log("Edit");
-    }
 
     return (
         <div>
@@ -81,8 +84,8 @@ const Home = () => {
                                             </td>
                                             <td>
                                                 <Link to="/edit">
-                                                    <Button variant="primary" onClick={() => handleEdit(item.id)}>Edit</Button>
-                                                </Link>
+                                                    <Button variant="primary" onClick={() => handleEdit(item.id, item.Name, item.age)}>Edit</Button>
+                                                </Link>{' '}
                                                 <Button variant="danger" onClick={() => handleDelete(item.id)}>Delete</Button>{' '}
                                             </td>
                                         </tr>
